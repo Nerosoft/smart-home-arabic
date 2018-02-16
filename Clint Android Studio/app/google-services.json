@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "183898994750",
+    "firebase_url": "https://nero-soft.firebaseio.com",
+    "project_id": "nero-soft",
+    "storage_bucket": "nero-soft.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183898994750:android:8edc35483acfc845",
+        "android_client_info": {
+          "package_name": "nero_soft.com.nero_soft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183898994750-c2u6a49rog8dt29jp6o6fvr9v9ujf1jm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nero_soft.com.nero_soft",
+            "certificate_hash": "B4C0E5D67702D13B746C9E5E2AE16A2EE46434D5"
+          }
+        },
+        {
+          "client_id": "183898994750-ln4i54fim7mntqn7j8pbp7vdca92q5l0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6DI02HvMo__mLqyANR_tw8n3aGdUaQAo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183898994750-ln4i54fim7mntqn7j8pbp7vdca92q5l0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

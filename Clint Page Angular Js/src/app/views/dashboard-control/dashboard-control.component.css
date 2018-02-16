@@ -1,0 +1,239 @@
+@media (max-width: 767px) {
+    .divpanal{
+            margin-left: 0;
+    }
+}
+@media (min-width: 767px) {
+    .divpanal{
+        margin-left: 300px;
+    }
+}
+    
+    
+    /* Start Panal Control */
+    .divpanal{
+        height: 100%
+    }
+     /* End Panal Control */
+    
+    
+     /*** PANEL PRIMARY ***/
+    .with-nav-tabs.panel-primary .nav-tabs > li > a,
+    .with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+        color: #fff;
+    }
+    .with-nav-tabs.panel-primary .nav-tabs > .open > a,
+    .with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+    .with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+        color: #fff;
+        background-color: #2e353d;
+        border-color: transparent;
+    }
+    .with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+    .with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+        color: #FFF;
+        background-color: #1c1d26;
+        border-color: #2e353d;
+        border-bottom-color: transparent;
+    }
+    .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu {
+        background-color: #2e353d;
+        border-color: #23282e;
+    }
+    .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
+        color: #fff;   
+    }
+    .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+        background-color: #23282e;
+    }
+    .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+    .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+        background-color: #2e353d;
+    }
+    .divpanal .nav,
+    .dilog .nav{
+        border-bottom: 0;
+    }
+    .divpanal .panel-heading,
+    .dilog .panel-heading{
+      padding: 7px 15px 0 15px;
+      border-top-left-radius:0;
+      border-top-right-radius:0;
+    }
+    .divpanal .panel-primary > .panel-heading,
+    .dilog .panel-primary > .panel-heading{
+        background-color: #23282e;
+        border-color: #2e353d;
+    }
+    .divpanal .panel-primary,
+    .dilog .panel-primary{
+        border-color: #1c1d26;
+    }
+    .divpanal .panel-body,
+    .dilog .panel-body{
+        height: 100% !important;
+        min-height: 100% !important;
+        color: #FFF;
+        background-color: #1c1d26;   
+        padding-bottom: 2px;
+    }
+    /********************************************************************/
+    
+    
+    .widget {
+      
+        width: 200px;
+        height: 180px;
+        padding: 10px;
+        margin: 8px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 4px;
+        border: solid 1px rgba(255, 255, 255, 0.3);
+        background-color: #21232D;
+        display: inline-block;
+
+    }
+    .icon {
+        background: #272833;
+        border-radius: 100%;
+        display: inline-block;
+        text-align: center;
+        line-height: 2em;
+        width: 2em;
+        cursor: pointer;
+    }
+    .ledon{
+        color: yellow;
+    }
+    .ledtimeon{
+        color: green;
+    }
+    /* ------------------ Timer ---------------- */
+    
+    .widgettime{
+        position: relative;
+        height: 223px;
+        width: 200px;
+        padding: 10px;
+        margin: 8px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 4px;
+        display: inline-block;
+        transform-style: preserve-3d;
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+    }
+    .SetTime{
+        border: solid 1px rgba(255, 255, 255, 0.3);
+        background-color: #21232D;
+        padding: 10px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        
+    }
+    .widgettime .front{
+        z-index: 5000;
+        backface-visibility: hidden;
+        /* display: none; */
+    }
+    .widgettime .back{
+        z-index: 6000;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+    }
+    .ledtimeon:hover{
+        transform: rotateY(180deg);
+    }
+
+    .setTimeIcon{
+        margin: 0px 9px 0 9px;
+    }
+
+    /* ----------------------------------------- */
+    
+.dilog{
+    display: none;
+}
+.dtp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2000;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.dilog .dtp{
+   background: rgba(0, 0, 0, 0.5);  
+} 
+.dilog .dtp{
+    padding-top: 10%;
+    
+}
+.dilog .dtp .option{
+    width: 200px;
+    height: 70%;
+    cursor: pointer;
+}
+
+
+.dilog .panel{
+    margin-bottom: 0;   
+}
+
+
+.dilog .panel-body .fa-clock-o{
+   font-size: 100px;
+  margin-bottom: 10px;
+   display: block;
+}
+.dilog .ti .inc,
+.dilog .ti .dec{
+    width: 40px;
+    display: inline;
+}
+.dilog .ti .time{
+    width:80px; 
+    display: inline;
+}
+.dilog .ti .btn-success{
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+.dilog .fa-times{
+    float: right;
+    margin: 0;
+    font-size: 20px;
+    color : aqua;
+    
+}
+.custom-control-input{
+    width: 20px;
+    height: 20px;
+}
+.cf{
+    float: left;
+}
+.cn{
+float: right;
+}
+/*------Message-------*/
+.Mfadein{
+    display: block;
+}

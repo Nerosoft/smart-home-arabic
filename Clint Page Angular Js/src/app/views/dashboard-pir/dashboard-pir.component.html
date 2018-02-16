@@ -1,0 +1,63 @@
+<div class="divpanal">
+  <div class="panel with-nav-tabs panel-primary">
+      <div class="panel-heading">
+              <ul class="nav nav-tabs">
+                  <li class="active"><a href="#tab1primary" data-toggle="tab">Setting</a></li>
+                  <li><a href="#tab2primary" data-toggle="tab">List Of Led</a></li>
+                  <li><a href="#tab3primary" data-toggle="tab">Pir Led ON</a></li>
+                  <li><a href="#tab4primary" data-toggle="tab">Pir Led OFF</a></li>
+              </ul>
+      </div>
+      <div class="panel-body">
+          <div class="tab-content">
+              <div class="tab-pane fade in active" id="tab1primary">
+                <div class="text-center"> 
+                  <i class="fa fa-clock-o fa-5x"></i>
+                  <div class="PIR">
+                     <button class="btn btn-primary" (click)="pirPlusTime()">+</button> 
+                     <div class="progress progpir">
+                        <div id="pir_prog" class="progress-bar" role="progressbar" style="width: 5%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{Serv.Sensor_State.time}}%</div>
+                      </div>              
+                     <button class="btn btn-danger" (click)="pirMinceTime()">-</button>
+                     <button class="btn btn-success"(click)="sendDataPir()">Click To Active</button>
+                </div> 
+                <div class="option text-center">
+                    <div  class="widget" *ngFor="let led of Led" [ngClass]="{'ledon':led.state}" (click)="clickLedOption(led.mode)"  >
+                            <i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true" [ngClass]="{ 'hidden' : !led.click}"></i>                       
+                        <span class="icon fa fa-lightbulb-o fa-4x"></span>
+                        <h3>{{led.name}}</h3>
+                      </div>
+                </div>
+              </div>
+              </div>
+              <div class="tab-pane fade" id="tab2primary">
+
+                <div  class="widget" *ngFor="let led of Serv.Led" (click)="addPirLed(led.id)"  >
+                        <i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true" [ngClass]="{ 'hidden' : !led.pir}"></i>
+                    <span class="icon fa fa-lightbulb-o fa-4x"></span>
+                    <h3>{{led.name}}</h3>
+                  </div>
+
+              </div>
+              <div class="tab-pane fade" id="tab3primary">
+
+                    <div  class="widget" *ngFor="let led of Serv.Led" (click)="addPirLed(led.id)" [ngClass]="{ 'hidden' : !led.pir}" >
+                            <i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true" [ngClass]="{ 'hidden' : !led.pir}"></i>
+                        <span class="icon fa fa-lightbulb-o fa-4x"></span>
+                        <h3>{{led.name}}</h3>
+                    </div>
+
+              </div>
+              <div class="tab-pane fade" id="tab4primary">
+
+                    <div  class="widget" *ngFor="let led of Serv.Led" (click)="addPirLed(led.id)" [ngClass]="{ 'hidden' : led.pir}" >
+                            <i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true" [ngClass]="{ 'hidden' : !led.pir}"></i>
+                        <span class="icon fa fa-lightbulb-o fa-4x"></span>
+                        <h3>{{led.name}}</h3>
+                   </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

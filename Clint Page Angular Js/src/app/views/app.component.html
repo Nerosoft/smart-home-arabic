@@ -1,0 +1,104 @@
+<div class="nav-side-menu">
+  <div class="brand">NerO-SofT-{{Serv.UserName.User}}</div>
+  <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+    <div class="menu-list">
+  
+      <ul id="menu-content" class="menu-content collapse out">
+        <li id="msterdash" class="" [ngClass]="{ 'active' :Serv.menu.master_dash}" routerLink="/" >
+          <a >
+          <i class="fa fa-dashboard fa-lg"></i> Dashboard
+          </a>
+        </li>
+        <li class="" [ngClass]="{ 'active' :Serv.menu.led_dash}" routerLink="/dash" >
+          <a >
+          <i class="fa fa-tasks   fa-lg"></i> Dashboard Control
+          </a>
+        </li>
+
+        <li  data-toggle="collapse" data-target="#products" class="collapsed" [ngClass]="{ 'active' :Serv.menu.pir}">
+          <a ><i class="fa fa-street-view fa-lg" ></i> Sensor Pir <span class="arrow"></span></a>
+        </li>
+        <ul class="sub-menu collapse" id="products">
+          <li class="" [ngClass]="{ 'active' :Serv.menu.pir}" routerLink="/Pirsensor"  ><a ></a>Setting</li>
+          <li [ngClass]="{ 'SensorOn' : Serv.Sensor_State.SPIR}" onclick="$('#myModal_on_pir').modal('show')">Sensor ON</li>
+          <li [ngClass]="{ 'SensorOn' : !Serv.Sensor_State.SPIR}" onclick="$('#myModal_off_pir').modal('show')">Sensor OFF</li>
+        </ul>
+
+
+        <li data-toggle="collapse" data-target="#service" class="collapsed">
+          <a ><i class="fa fa-wrench  fa-lg"></i> IR Remote <span class="arrow"></span></a>
+        </li>  
+        <ul class="sub-menu collapse" id="service">
+          <li [ngClass]="{ 'SensorOn' : Serv.Sensor_State.SIR}" onclick="$('#myModal_on_ir').modal('show')">IR ON</li>
+          <li [ngClass]="{ 'SensorOn' : !Serv.Sensor_State.SIR}" onclick="$('#myModal_off_ir').modal('show')">IR OFF</li>
+        </ul>
+
+
+        <li id="mangeuser"  [ngClass]="{ 'active' :Serv.menu.cange_user||Serv.menu.add_user||Serv.menu.edite_user||Serv.menu.edite_name_led}" data-toggle="collapse" data-target="#settuser" class="collapsed">
+          <a ><i class="fa fa-edit fa-lg"></i> User <span class="arrow"></span></a>
+        </li>
+        <ul id="settuser"  class="sub-menu collapse">
+          <li [ngClass]="{ 'active' :Serv.menu.cange_user}"  routerLink="/changadmin">Change Admin Password</li>
+          <li [ngClass]="{ 'active' :Serv.menu.add_user}"    routerLink="/reg" >Add User</li>
+          <li [ngClass]="{ 'active' :Serv.menu.edite_user}"  routerLink="/member">Edit User</li>
+          <li [ngClass]="{ 'active' :Serv.menu.edite_name_led}"  routerLink="/editnameled">Edite Name Led</li>
+        </ul>
+
+
+         <li  onclick="$('#myModalon').modal('show')">
+          <a>
+          <i class="fa fa-map-pin fa-lg"></i> Click To On All Led
+          </a>
+          </li>
+
+          <li onclick="$('#myModaloff').modal('show')">
+            <a>
+            <i class="fa fa-lightbulb-o fa-lg"></i> Click To Off All Led
+            </a>
+            </li>
+
+         <li>
+          <a (click)="logOut()">
+          <i class="fa fa-user-times fa-lg"></i> Log Out
+          </a>
+        </li>
+      </ul>
+   </div>
+</div>
+
+
+<!-- Modal -->
+<div *ngFor="let allLed of AllLed" class="modal fade" id={{allLed.state}} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{allLed.title}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{allLed.msg}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" (click)="clickRunAllLed(allLed.state)" data-dismiss="modal" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+

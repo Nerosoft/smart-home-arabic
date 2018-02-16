@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>MyApp</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="assets/out/layout/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="assets/out/layout/css/font-awesome.min.css">
+
+</head>
+<body>
+    <span id="User" class="hidden">zxcvbnm</span>
+    <span id="Pass" class="hidden">ccccccc</span>
+    <span id="state" class="hidden">admin</span>
+    <!-- <input id="Pass" class="hidden" type="password" value="123" name="asdas" > -->
+
+    <div class="progress progloade" style="display: none;">
+        <div id="progloadeid" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 5%">
+          <span class="sr-only">40% Complete (success)</span>
+        </div>
+      </div> 
+  <app-root></app-root>
+</body>
+<script src="assets/out/layout/js/jquery-3.2.1.min.js"></script>
+<script src="assets/out/layout/js/bootstrap.js"></script>
+ <script>
+  $(function(){
+    window.onresize=function(){
+    $(".dilog .dtp").css("paddingLeft", ( ( $(window).width() - $('.dilog .dtp .option').width() )/2) ); 
+    }
+  });
+</script>
+
+
+</html>

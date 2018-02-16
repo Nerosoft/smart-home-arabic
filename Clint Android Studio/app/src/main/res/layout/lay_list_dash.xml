@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layoutDirection="ltr"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/img_list_dash"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_pnal_user_active"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/text_list_dash"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:lines="1"
+        android:textStyle="bold|italic"
+        android:text="User Name"
+        android:layout_width="160dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:visibility="visible"
+            android:id="@+id/but_list_dash"
+            android:background="@drawable/but_style_dash"
+            android:text="Kik Out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/check_list_dash"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="65dp"
+        android:background="#C6C2C2"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+</LinearLayout>

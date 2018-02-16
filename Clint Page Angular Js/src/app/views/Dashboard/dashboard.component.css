@@ -1,0 +1,94 @@
+@media (max-width: 767px) {
+    .divpanal{
+            margin-left: 0;
+    }
+    .anther{
+        font-size: 2em;
+       
+    } 
+}
+@media (min-width: 767px) {
+    .divpanal{
+        margin-left: 300px;
+    }
+    .anther{
+        font-size: 4em;
+    }
+
+}
+@media (min-width: 404px) and ( max-width: 1150px){
+    .homedash .col-xs-6{
+        width: 50%
+    }
+
+}
+@media (max-width: 403px){
+    .homedash .col-xs-6{
+        width: 100%
+    }
+}
+  .divpanal{
+      overflow: hidden;
+      
+  } 
+
+
+  .homedash{
+      font-size: 16px;
+      width: 95%;
+  }
+  .how{
+    width:95% ;
+  }
+
+  
+  .stat a{
+      color: #FFF;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  .homedash .total {
+      background-color: #3498db;
+
+  }
+  .homedash .pending {
+      background-color: #c0392b;
+  }
+  .homedash .item {
+      background-color: #d35400;
+  }
+  .homedash .comme {
+      background-color: #8e44ad;
+  }
+  
+  .homedash .comme,
+  .homedash .item,
+  .homedash .pending,
+  .homedash .total{
+      margin-bottom: 10px;
+  }
+
+  .stat {
+      background-color: #FFF;
+      /* width: 100%; */
+      color: #FFF;
+      border: 1px solid #23282e;
+      padding: 15px;
+  }
+  
+  .anther{
+    
+      display: block;
+  }
+  
+  .dash-panl{
+	margin-top: 20px;
+ } 
+ .u10{
+     height: 40px;
+     line-height: 40px;
+ }  
+
+  
+  
+  

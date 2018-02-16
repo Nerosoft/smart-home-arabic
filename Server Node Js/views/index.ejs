@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>SmarT HomE</title>
+  <base href="./">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="ang/smart_home.ico">
+  <link rel="stylesheet" type="text/css" href="ang/assets/out/layout/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="ang/assets/out/layout/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="ang/styles.8022ed9ede8df682ad39.bundle.css">
+
+</head>
+<body>
+    <span id="User" class="hidden"><%=user%></span>
+    <span id="Pass" class="hidden"><%=pass%></span>
+    <span id="state" class="hidden"><%=state%></span>
+    <!-- <input id="Pass" class="hidden" type="password" value="123" name="asdas" > -->
+
+    <div class="progress progloade" style="display: none;">
+        <div id="progloadeid" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 5%">
+          <span class="sr-only">40% Complete (success)</span>
+        </div>
+      </div> 
+  <app-root></app-root>
+<!-- <script type="text/javascript" src="ang/inline.bundle.js"></script>
+<script type="text/javascript" src="ang/polyfills.bundle.js"></script>
+<script type="text/javascript" src="ang/styles.bundle.js"></script>
+<script type="text/javascript" src="ang/vendor.bundle.js"></script>
+<script type="text/javascript" src="ang/main.bundle.js"></script> -->
+<!-- ************************** -->
+<script type="text/javascript" src="ang/inline.b44cbbd33e8c983b8f53.bundle.js"></script>
+<script type="text/javascript" src="ang/polyfills.fed567bc92850d9d52f3.bundle.js"></script>
+<script type="text/javascript" src="ang/vendor.cb8e04c57678cf602aa6.bundle.js"></script>
+<script type="text/javascript" src="ang/main.ec3238ecc9248c42e715.bundle.js"></script>
+</body>
+<script src="ang/assets/out/layout/js/jquery-3.2.1.min.js"></script>
+<script src="ang/assets/out/layout/js/bootstrap.js"></script>
+ <script>
+  $(function(){
+    window.onresize=function(){
+    $(".dilog .dtp").css("paddingLeft", ( ( $(window).width() - $('.dilog .dtp .option').width() )/2) ); 
+    }
+  });
+</script>
+</html>

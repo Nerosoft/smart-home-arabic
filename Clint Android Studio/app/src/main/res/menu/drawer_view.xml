@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+            <item
+                android:id="@+id/nav_PowerOF"
+                android:icon="@drawable/ic_ledprooff"
+                android:title="Power OF" />
+            <item
+                android:id="@+id/nav_PowerON"
+                android:icon="@drawable/ic_ledproon"
+                android:title="Power ON" />
+
+
+
+
+    <item android:title="Setting Super User Of Admin" android:id="@+id/setting_admin">
+        <menu>
+            <item
+                android:id="@+id/nav_ChangeNameLed"
+                android:icon="@android:drawable/ic_menu_sort_by_size"
+                android:title="Change Name Led" />
+            <item
+                android:id="@+id/nav_CustomUser"
+                android:icon="@android:drawable/ic_menu_edit"
+                android:title="Edite User" />
+            <item
+                android:id="@+id/nav_CreateUser"
+                android:icon="@android:drawable/ic_input_add"
+                android:title="Create User" />
+            <item
+                android:id="@+id/nav_ChangeAdmin"
+                android:icon="@android:drawable/ic_menu_agenda"
+                android:title="Change Admin User" />
+        </menu>
+    </item>
+
+    <item android:title="Sensor PIR">
+        <menu>
+            <!--<item-->
+                <!--android:id="@+id/nav_PIR"-->
+                <!--android:icon="@drawable/ic_dashboard"-->
+                <!--android:title="Setting PRI Sensor" />-->
+            <group android:id="@+id/ww2" >
+                <item
+                    android:id="@+id/nav_PIRON"
+                    android:icon="@drawable/ic_sinsor_pir"
+                    android:title="PRI ON" />
+                <item
+                    android:id="@+id/nav_PIROF"
+                    android:icon="@drawable/ic_cansle"
+                    android:title="PRI OF" />
+
+            </group>
+        </menu>
+    </item>
+    <item  android:title="Sensor IR">
+        <menu>
+            <group android:id="@+id/ww" >
+                <item
+                    android:id="@+id/nav_IRON"
+                    android:icon="@drawable/ic_ledmotion_sensor"
+                    android:title="IR ON" />
+                <item
+                    android:id="@+id/nav_IROF"
+                    android:icon="@drawable/ic_cansle"
+                    android:title="IR OF" />
+
+            </group>
+        </menu>
+    </item>
+    <item  android:title="Log Out From Smart Home">
+        <menu>
+            <group  >
+                <item
+                    android:id="@+id/log_out"
+                    android:icon="@android:drawable/ic_menu_set_as"
+                    android:title="Log Out" />
+
+            </group >
+        </menu>
+    </item>
+
+
+</menu>

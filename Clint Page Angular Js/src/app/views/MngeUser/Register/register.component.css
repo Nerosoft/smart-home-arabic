@@ -1,0 +1,44 @@
+@media (max-width: 767px) {
+    .divpanal{
+            margin-left: 0;
+    }
+}
+@media (min-width: 767px) {
+    .divpanal{
+        margin-left: 300px;
+    }
+}
+/* @media (max-width:1190px) {
+   .widget{
+      color: red;
+   }
+} */
+    
+    /* Start Panal Control */
+    .divpanal{
+        height: 100%;
+    }
+.formreg{
+
+    /* margin-top: 20px; */
+}
+.dactiv  li a{
+    cursor: pointer;
+}
+
+.panel-default > .panel-heading {
+    color: #FFF;
+    background-color: #2E353d;
+    border-color: #2E353d;
+}
+
+.divpanal .panel-body{
+    background-color: #1c1d26;
+   
+}
+.panel{
+    border: none;
+}
+label{
+    color: antiquewhite;
+}

@@ -1,0 +1,40 @@
+<div class="divpanal">
+  <h1 class="text-center">Led Edit</h1>
+
+  <div class="container how">
+      <div class="table-responsive">
+        <table class="main-table text-center table table-bordered">
+    <tbody>
+      <tr> <td>Name Of Led</td> <td>Controll</td> </tr>
+      <tr *ngFor='let led of Serv.Led'  >
+        <td> <input type="text" id="input{{led.id}}"  [(ngModel)]='led.newname' > </td>
+        <td > <a (click)="clickToCange(led.id)" class="btn btn-primary ">Change!</a> </td>
+      </tr>
+        
+    
+        </tbody>
+      </table>
+      </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id={{AllLed.state}} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabe1l" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel1">{{AllLed.title}}</h5>
+          <button (click)="closeMessage()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+           {{AllLed.msg}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" (click)="closeMessage()" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" (click)="clickToChangLed()" data-dismiss="modal" class="btn btn-primary">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #1c1d26;
+	/* color: #ffffff; */
+  }
+
+
+h1 {
+    
+      margin: 30px;
+      font-weight: bold;
+      color: #666;
+  }
+  .widgettime h3,
+  .widget h3{
+    word-wrap: break-word;
+    height: 30px;
+    overflow: hidden;
+  }
+  
+  .widgettime,
+  .widget,
+  .SetTime{
+    /* height: auto !important; */
+  }
+
+
+  .progloade{
+    display: none;
+    height: 3px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0;
+    z-index: 1;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+  .divpanal{
+          margin-left: 0;
+  }
+  h1{
+    font-size: 2em;
+   
+} 
+}
+@media (min-width: 767px) {
+  .divpanal{
+      margin-left: 300px;
+  }
+  h1{
+    font-size: 4em;
+}
+}
+/* @media (max-width:1190px) {
+ .widget{
+    color: red;
+ }
+} */
+  
+  /* Start Panal Control */
+  .divpanal{
+      height: 100%
+  }
+  .how{
+    width:95% ;
+  }
+  .tab-content{
+    text-align: center;
+  }

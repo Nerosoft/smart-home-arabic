@@ -1,0 +1,9 @@
+.main-table tr:first-child td {
+    background-color: #312929;
+    color: #FFF;
+    font-weight: bold;
+}
+td{
+    color: #FFF;
+}
+

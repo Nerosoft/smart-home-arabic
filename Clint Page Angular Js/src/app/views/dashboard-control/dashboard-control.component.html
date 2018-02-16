@@ -1,0 +1,201 @@
+<div class="divpanal">
+  <!-- <h1>Login  </h1> -->
+  <div class="panel with-nav-tabs panel-primary">
+      <div class="panel-heading">
+              <ul class="nav nav-tabs">
+                  <li class="active"><a href="#tab1primary" data-toggle="tab">All Led</a></li>
+                  <li><a href="#tab2primary" data-toggle="tab">All Led On</a></li>
+                  <li><a href="#tab3primary" data-toggle="tab">All Led Of</a></li>
+                  <li class="dropdown">
+                      <a href="#" data-toggle="dropdown">Timer Of Led <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                          <li><a  href="#tab4primary" data-toggle="tab">All Led</a></li>
+                          <li><a href="#tab5primary" data-toggle="tab">All Led On</a></li>
+                          <li><a href="#tab6primary" data-toggle="tab">All Led Of</a></li>
+                          <li><a (click)="messageBoxShow(0)" >Clear All</a></li> 
+                          <!-- $('#myModal').modal('show') -->
+                      </ul>
+                  </li>
+              </ul>
+      </div>
+      <div class="panel-body">
+          <div class="tab-content"> 
+              <div class="tab-pane fade in active" id="tab1primary">
+
+                    <div  class="widget" *ngFor="let led of Serv.Led" (click)="clickLed(led.id ,led.led)" [ngClass]="{ 'ledon' : led.state=='on'}" >
+                      <span class="icon fa fa-lightbulb-o fa-4x"></span>
+                      <h3>{{led.name}}</h3>
+                    </div>
+               <!-- <h1>{{mesage}}</h1> -->
+              </div>
+              <div class="tab-pane fade" id="tab2primary">
+
+                <div  class="widget ledon" *ngFor="let led of Serv.Led" (click)="clickLed(led.id,led.led)" [ngClass]="{ 'hidden' : led.state=='of'}" >
+                  <span class="icon fa fa-lightbulb-o fa-4x"></span>
+                  <h3>{{led.name}}</h3>
+                </div>
+                                                 
+              </div>
+              <div class="tab-pane fade" id="tab3primary">
+
+                <div  class="widget" *ngFor="let led of Serv.Led" (click)="clickLed(led.id,led.led)" [ngClass]="{ 'hidden' : led.state=='on'}" >
+                  <span class="icon fa fa-lightbulb-o fa-4x"></span>
+                  <h3>{{led.name}}</h3>
+                </div>
+
+              </div>
+              <div class="tab-pane fade" id="tab4primary">
+              
+                <div  class="widgettime" *ngFor="let led of Serv.Led"  [ngClass]="{ 'ledtimeon' : led.STL=='on'}" >
+                  <div class="SetTime back">
+                    <span class="icon fa fa-lightbulb-o fa-4x"></span>
+                    <h3>Time is {{led.ledinterval}} M {{led.statetime}}</h3>
+
+                    <i class="fa fa-refresh fa fa-2x setTimeIcon" (click)="messageBoxShow(2,led.id)" aria-hidden="true"></i>      
+                    <i class="fa fa fa-times fa fa-2x setTimeIcon" (click)="messageBoxShow(1,led.id)" aria-hidden="true"></i>
+                    <i class="fa fa-power-off fa fa-2x setTimeIcon" (click)="setSettingTime(led.id)" aria-hidden="true"></i>
+                    <!-- <i class="fa fa-times fa fa-3x setTimeIcon" aria-hidden="true"></i> -->
+
+                  </div>
+
+                  <div class="SetTime front">
+                    <span class="icon fa fa-lightbulb-o fa-4x"></span>
+                    <h3>{{led.name}}</h3>
+                    <i class="fa fa-power-off fa fa-2x setTimeIcon" (click)="setSettingTime(led.id)" aria-hidden="true"></i>
+                  </div>                             
+              </div>           
+          </div>
+
+          <div class="tab-pane fade" id="tab5primary">
+
+                <!-- All Led ON Timer -->
+
+                 <div  class="widgettime ledtimeon" *ngFor="let led of Serv.Led"  [ngClass]="{ 'hidden' : led.STL=='of'}" >
+                  <div class="SetTime back">
+                    <span class="icon fa fa-lightbulb-o fa-4x"></span>
+                    <h3>Time is {{led.ledinterval}} M {{led.statetime}}</h3>
+
+                    <i class="fa fa-refresh fa fa-2x setTimeIcon" (click)="messageBoxShow(2,led.id)" aria-hidden="true"></i>      
+                    <i class="fa fa fa-times fa fa-2x setTimeIcon" (click)="messageBoxShow(1,led.id)" aria-hidden="true"></i>
+                    <i class="fa fa-power-off fa fa-2x setTimeIcon" (click)="setSettingTime(led.id)" aria-hidden="true"></i>
+
+
+                   </div>
+
+
+                  <div class="SetTime front">
+                    <span class="icon fa fa-lightbulb-o fa-4x"></span>
+                    <h3>{{led.name}}</h3>
+                    <i class="fa fa-power-off fa fa-2x setTimeIcon" (click)="setSettingTime(led.id)" aria-hidden="true"></i>
+                  </div>
+                  
+               
+              </div>
+
+          </div>
+          <div class="tab-pane fade" id="tab6primary"> 
+            
+<!-- All Led Of Timer -->
+
+<div  class="widgettime" *ngFor="let led of Serv.Led"  [ngClass]="{ 'hidden' : led.STL=='on'}" >
+    <div class="SetTime back">
+      <span class="icon fa fa-lightbulb-o fa-4x"></span>
+      <h3>Time is {{led.ledinterval}} M {{led.statetime}}</h3>
+
+      <i class="fa fa-refresh fa fa-2x setTimeIcon" (click)="messageBoxShow(2,led.id)" aria-hidden="true"></i>      
+      <i class="fa fa fa-times fa fa-2x setTimeIcon" (click)="messageBoxShow(1,led.id)" aria-hidden="true"></i>
+      <i class="fa fa-power-off fa fa-2x setTimeIcon" (click)="setSettingTime(led.id)" aria-hidden="true"></i>
+
+
+     </div>
+
+
+    <div class="SetTime front">
+      <span class="icon fa fa-lightbulb-o fa-4x"></span>
+      <h3>{{led.name}}</h3>
+      <i class="fa fa-power-off fa fa-2x setTimeIcon" (click)="setSettingTime(led.id)" aria-hidden="true"></i>
+    </div>
+    
+ 
+</div>
+
+          
+          </div> 
+
+
+      </div>
+  </div>
+
+</div>
+<!-- onclick="$(this).fadeOut()" -->
+
+<div id="timedilog" class="dilog"  > 
+
+   <div class="dtp" id="dtp_0aGSs" >  
+    <div id="optiondilog" class="option">
+          <div class="panel with-nav-tabs panel-primary">
+              <div class="panel-heading">
+                    <i class="fa fa-times" onclick="$(this).parent().parent().parent().parent().parent().fadeOut()" aria-hidden="true"></i>
+                      <ul class="nav nav-tabs">
+                          
+                          <li class="active"><a href="#tabpprimary" data-toggle="tab">OK</a></li> 
+                      </ul>
+              </div>
+              <div class="panel-body">
+                  <div class="tab-content">
+                      <div class="tab-pane fade ti in active" id="tabpprimary">
+                          <div class="text-center">
+                            
+                                
+                                        <label (click)="chickOf()" class="custom-control custom-radio cf">
+                                          <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input">
+                                      
+                                          <span class="custom-control-description">OFF</span>
+                                        </label>
+                                        <label (click)="chickOn()" class="custom-control custom-radio cn">
+                                            <span class="custom-control-description">ON</span>
+                                          <input id="radioStacked2" checked name="radio-stacked" type="radio" class="custom-control-input">
+                                        </label>
+                                    
+
+                                <i class="fa fa-clock-o fa-5x"></i>                      
+                                <button class="btn btn-primary inc" (click)="incM()" type="button">+</button>
+                                    <input type="text" value="M: {{Mtime}}"  disabled class="form-control text-center time">
+                               <button class="btn btn-danger dec"  (click)="desM()" type="button">-</button>
+
+                               <button class="btn btn-primary inc" (click)="incH()" type="button">+</button>
+                               <input type="text" value="H: {{Htime}}"  disabled class="form-control text-center time">
+                          <button class="btn btn-danger dec"  (click)="desH()" type="button">-</button>
+                               
+                          </div>
+                          <button type="button" class="btn btn-success" (click)="clickTimeLed()" >Run</button>         
+                      </div>
+                  </div>
+              </div>
+          </div>
+     
+     
+        </div> 
+   </div>   
+</div>
+
+<!-- Modal -->
+<div class="modal" id="myModalTimers" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{MessageTitle}}</h5>
+        <button type="button" class="close" (click)="canselMessageBox()"  aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            {{MessageBody}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="canselMessageBox()" >Close</button>
+        <button type="button" class="btn btn-primary" (click)="messageBoxShowOk()" >OK</button>
+      </div>
+    </div>
+  </div>
+</div>

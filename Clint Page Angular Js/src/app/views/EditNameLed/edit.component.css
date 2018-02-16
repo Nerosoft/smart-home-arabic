@@ -1,0 +1,19 @@
+.main-table tr:first-child td {
+    background-color: #312929;
+    color: #FFF;
+    font-weight: bold;
+}
+td{
+    color: #FFF;
+    line-height:2!important;
+}
+input{
+
+    width: 100%;
+    text-align: center;
+    background-color: #1C1D26;
+    border: none;
+}
+.modal-dialog {
+    margin: 100px auto;
+}

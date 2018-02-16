@@ -1,0 +1,20 @@
+.dactiv  li a{
+    cursor: pointer;
+}
+
+.panel-default > .panel-heading {
+    color: #FFF;
+    background-color: #2E353d;
+    border-color: #2E353d;
+}
+
+.divpanal .panel-body{
+    background-color: #1c1d26;
+   
+}
+.panel{
+    border: none;
+}
+label{
+    color: antiquewhite;
+}

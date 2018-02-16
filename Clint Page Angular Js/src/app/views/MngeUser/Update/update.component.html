@@ -1,0 +1,101 @@
+<div class="divpanal">
+    <div class="container container how">
+    <div class="row formreg">
+        <div class="col-md-8 ">
+            <div class="panel panel-default">
+                <div class="panel-heading ">Update User</div>
+
+                <div class="panel-body">
+                    <form novalidate name="myForm" method="POST"    class="form-horizontal" (submit)='mysubmit()'>
+                        
+
+                        <div class="form-group" [ngClass]="{ 'has-error' : name.errors?.required && name.touched || name.errors?.minlength && name.touched || UserError.user  }" (click)="click('user')" >
+                            <label for="name" class="col-md-4 control-label">Name</label>
+
+                            <div class="col-md-6">
+                                <input  id="name" type="text" class="form-control"  [(ngModel)]='user.user' #name="ngModel" name="name" value="" required minlength="5" required autofocus>
+                                </div>
+                        </div>
+
+                        <div class="form-group hidden" [ngClass]="{ 'has-error' : email.errors?.email && email.touched || email.errors?.required && email.touched || UserError.email }" (click)="click('email')">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" [(ngModel)]='user.email' #email="ngModel" name="email" value="" email required>
+                                
+                                </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{ 'has-error' : password.errors?.minlength && password.touched || password.errors?.required && password.touched || UserError.password }" (click)="click('password')" >
+                            <label for="password" class="col-md-4 control-label">Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" [(ngModel)]='user.password' #password="ngModel" name="password" required minlength="7" required>
+                        
+                            </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{ 'has-error' : passwordConfirmation.errors?.minlength && passwordConfirmation.touched || passwordConfirmation.errors?.required && passwordConfirmation.touched || UserError.password }"  > 
+                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+
+                            <div class="col-md-6">
+                                <input id="passwordConfirm" type="password" class="form-control" [(ngModel)]='user.passwordConfirmation' #passwordConfirmation="ngModel" name="passwordConfirmation" required minlength="7" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                                <label for="dropdownMenu1" class="col-md-4 control-label">State Of User</label>
+    
+                                <div class="col-md-6">
+                                        <div class="dropdown">
+                                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                {{StateOfUser}}
+                                                <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dactiv" aria-labelledby="dropdownMenu1">
+                                                <li><a (click)="clickdrop('1')" >Active</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a (click)="clickdrop('0')">Wait</a></li>
+                                                </ul>
+                                            </div>
+                                </div>
+                            </div>
+    
+
+
+
+                        <div class="form-group hidden" [ngClass]="{ 'has-error' :  phone.errors?.required && phone.touched || UserError.phone }" (click)="click('phone')" >
+                            <label for="Phone" class="col-md-4 control-label">Phone</label>
+
+                            <div class="col-md-6">
+                                <input id="phone" type="number" class="form-control" [(ngModel)]='user.phone'  #phone="ngModel" name="phone"  onKeyUp="if(this.value.length < 11 || this.value.length > 11 ) $(this).parent().parent().addClass('has-error');else $(this).parent().parent().removeClass('has-error')"  autocomplete="off"  required>
+                                </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comment" class="col-md-4 control-label">Comment</label>
+
+                            <div class="col-md-6">
+                                <input id="comment" type="text" class="form-control input-lg" [(ngModel)]='user.comment' name="comment" >
+                            </div>
+                        </div>                      
+
+
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-success" >
+                                    {{submit}}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+    </div>
+</div>

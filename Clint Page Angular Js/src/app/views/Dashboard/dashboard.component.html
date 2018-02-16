@@ -1,0 +1,74 @@
+<div class="divpanal">
+<div class="container homedash text-center">  
+    <h1 class="anther">DashBoard </h1>
+    <div class="row">
+
+        <div class="col-xs-6 col-sm-6 col-md-3">
+            <div class="stat total">
+            Total Member<a class="anther" routerLink="/member">  {{info_dash.cont.member}} </a>
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-3">
+            <div class="stat pending">
+                Pending Member<a class="anther" routerLink="/member"> {{info_dash.cont.PandingMember}} </a>
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-3">
+            <div class="stat item">
+            Total Connection<span class="anther"> {{info_dash.member}} </span>
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-3">
+            <div class="stat comme">
+            Total Request<span class="anther"> {{info_dash.req}} </span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container how dash-panl">
+        
+        <div class="row">
+
+
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-users">  Latest Register Users </i> </div>
+                            <div class="panel-body">
+                                <ul class="list-unstyled mylist">
+                                    <li class="u10" *ngFor='let user of last_Users'>{{user.email}}
+                                        <a routerLink="/update/{{user.id}}/{{user.GroupU}}/{{user.email}}/{{user.comment}}" class="btn btn-success pull-right">Edit</a> 
+                                    </li>
+                                </ul> 
+                            </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-users">  Latest Connection Users </i>
+                         </div>
+                            <div class="panel-body">
+                                    <ul class="list-unstyled mylist">
+                                        <li id="kik{{user.email}}" class="u10" *ngFor='let user of active_Users;let i = index'>{{user.email}}
+                                            <a (click)="kikOutUser(i,user.email)" class="btn btn-danger pull-right">Kik Out</a> 
+                                        </li>
+                                    </ul> 
+                            </div>
+            </div>
+        </div>
+
+
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:baselineAligned="false"
+    android:gravity="center">
+
+    <FrameLayout
+        android:id="@+id/frg_main_row"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/lay_out_front"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/lay_click_led"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@color/search_shadow_layout"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/butLedOn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_ledproon"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/butLedOff"
+                        android:layout_width="35dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_ledprooff"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/text_name_led_on_of"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="Smart Home"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/framcontainer"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@color/search_shadow_layout">
+
+                <LinearLayout
+                    android:id="@+id/frag_lay_time_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/but_refresh_time"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="0dp"
+
+                            android:src="@drawable/ic_circulararrow" />
+
+                        <ImageView
+                            android:id="@+id/but_close_time"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="6dp"
+                            android:src="@drawable/ic_cansle" />
+
+                        <ImageView
+                            android:id="@+id/but_Back_Time"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="6dp"
+                            android:src="@drawable/ic_reload" />
+
+                    </LinearLayout>
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/text_stop_watch_timer"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:text="Smart Home"-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textColor="#FFF" />-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/but_Back_Time"-->
+                        <!--android:layout_width="20dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_gravity="end"-->
+                        <!--android:layout_marginRight="4dp"-->
+                        <!--android:src="@drawable/ic_backtime" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/frag_lay_time_on"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/butSetTimer"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_alarmclockon"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/butSetTimeroff"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_alarmclockoff"
+                            android:visibility="visible" />
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:id="@+id/text_name_led_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Smart Home"
+                        android:textAlignment="center"
+                        android:textColor="#FFF" />
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <!--   //////////////////////////            front bage   -->
+
+        <LinearLayout
+            android:id="@+id/lay_out_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#90000000"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="2dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hours / minutes"
+                        android:textColor="#7D7270"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/text_h_m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:05"
+                        android:textColor="#BDABA2"
+                        android:textSize="23dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All Time For Minutes"
+                        android:textColor="#7D7270"
+                        android:textSize="8dp" />
+
+                    <TextView
+                        android:id="@+id/text_all_m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 Minutes"
+                        android:textColor="#7D7270"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/but_close_set_timer"
+                    android:layout_width="55dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="-3dp"
+                    android:src="@drawable/ic_set_normal_btn_blue" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_stopwatch" />
+
+                <FrameLayout
+                    android:id="@+id/pointer_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rotation="30">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:paddingBottom="50dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/ic_hand_orang" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/pointer_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rotation="0">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:paddingBottom="50dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/ic_hand_green" />
+
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_timer_area"
+
+                    android:visibility="visible" />
+
+
+                <ProgressBar
+
+                    android:id="@+id/Progress_Bar_Time"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:layout_gravity="center"
+                    android:indeterminateDrawable="@drawable/progrs_style"
+                    android:max="100"
+                    android:progress="10"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_start_base_btn_dark" />
+
+                <ImageView
+                    android:id="@+id/but_state_on_off"
+                    android:layout_width="39dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_start_down_btn_dark" />
+
+                <TextView
+                    android:id="@+id/text_state_on_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="ON"
+                    android:textColor="#BDABA2"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="2dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hours / minutes"
+                        android:textColor="#7D7270"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/but_plush"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="27dp"
+                            android:src="@drawable/ic_plush" />
+
+                        <ImageView
+                            android:id="@+id/but_plusm"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_plusm" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/but_minush"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="27dp"
+                            android:src="@drawable/ic_minush" />
+
+                        <ImageView
+                            android:id="@+id/but_minusm"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_minusm" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/but_run_set_timer"
+                    android:layout_width="55dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="-3dp"
+                    android:src="@drawable/ic_reset_down_btn_dark" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>
+
+    <!--style="?android:attr/progressBarStyleLargeInverse"-->
