@@ -22,8 +22,8 @@ import { EditComponent } from './views/EditNameLed/edit.component';
 //const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 const config: SocketIoConfig = { url: 'http://'+ServHttpService.ip+':3000', options: {} };
 const appRoutes=[
-  {path:'dash' , component:DashboardControlComponent},
-  {path:'',component:DashboardComponent},
+  {path:'' , component:DashboardControlComponent},
+  {path:'dash',component:DashboardComponent},
   {path:'changadmin',component:CangeAdminComponent},
   {path:'Pirsensor',component:DashboardPirComponent},
   {path:'member',component:MembersComponent},

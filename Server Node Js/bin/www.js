@@ -115,7 +115,7 @@ setInterval(()=>{
 				CH.US.kikUser(element.email)
 			else element.SOCT=2;
 	}, this);
-},9000);
+},20000);
 
 console.log('%c Oh my heavens! ', 'background: #222; color: #bada55');
 

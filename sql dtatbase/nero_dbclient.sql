@@ -46,15 +46,15 @@ CREATE TABLE `arduino_led` (
 --
 
 INSERT INTO `arduino_led` (`id`, `name`, `state`, `led`, `ledinterval`, `refinterval`, `statetime`, `STL`, `pir`, `visibility`) VALUES
-(6, 'Living Room7', 'of', '10', '0', '0', 'of', 'of', 0, 1),
-(7, 'Living Room8', 'of', '11', '0', '0', 'of', 'of', 0, 1),
-(8, 'Living Room9', 'of', '12', '0', '0', 'of', 'of', 0, 1),
-(0, 'Living Room1', 'on', '4', '0', '0', 'of', 'of', 0, 1),
-(1, 'Living Room2', 'of', '5', '0', '0', 'of', 'of', 0, 1),
-(2, 'Living Room3', 'of', '6', '0', '0', 'of', 'of', 0, 1),
-(3, 'Living Room4', 'of', '7', '0', '0', 'of', 'of', 0, 1),
-(4, 'Living Room5', 'of', '8', '0', '0', 'of', 'of', 0, 1),
-(5, 'Living Room6', 'of', '9', '0', '0', 'of', 'of', 0, 1);
+(6, 'Living Room7', 'of', '10', '0', '5', 'of', 'of', 0, 1),
+(7, 'Living Room8', 'of', '11', '0', '5', 'of', 'of', 0, 1),
+(8, 'Living Room9', 'of', '12', '0', '5', 'of', 'of', 0, 1),
+(0, 'Living Room1', 'on', '4', '0', '5', 'of', 'of', 0, 1),
+(1, 'Living Room2', 'of', '5', '0', '5', 'of', 'of', 0, 1),
+(2, 'Living Room3', 'of', '6', '0', '5', 'of', 'of', 0, 1),
+(3, 'Living Room4', 'of', '7', '0', '5', 'of', 'of', 0, 1),
+(4, 'Living Room5', 'of', '8', '0', '5', 'of', 'of', 0, 1),
+(5, 'Living Room6', 'of', '9', '0', '5', 'of', 'of', 0, 1);
 
 -- --------------------------------------------------------
 

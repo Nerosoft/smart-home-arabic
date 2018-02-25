@@ -20,6 +20,7 @@ export class DashboardPirComponent implements OnInit {
   this.PROGRASS_DOM     =document.getElementById("pir_prog");
   this.PROGRASSSend_DOM =document.getElementById("progloadeid");
   this.PROGRASS_DOM.style.width=this.Serv.Sensor_State.time+"%";
+  this.clickLedOption( this.Serv.Sensor_State.mode );
    this.setEfectPir();
    this.Serv.getSocket().on("message",(data)=>{
     let command=JSON.parse(data.msg);
@@ -48,9 +49,14 @@ export class DashboardPirComponent implements OnInit {
   clickLedOption(mode){
     this.Serv.Sensor_State.mode=mode;
     this.Led.forEach(element => {
-      if(element.mode==mode)
+      if(element.mode==mode){
+        element.state=true;
         element.click=true;
-      else element.click=false;
+      }
+      else {
+        element.state=false;
+        element.click=false;
+      }
     });
   }
 
