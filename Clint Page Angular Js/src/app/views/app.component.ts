@@ -94,8 +94,8 @@ export class AppComponent implements OnInit {
       document.getElementById("msterdash").remove();
       document.getElementById("mangeuser").remove();
       document.getElementById("settuser").remove(); 
-      this.router.navigateByUrl('/dash');
-      this.router.ngOnDestroy();
+    //  this.router.navigateByUrl('/');
+      
     }
   }
 

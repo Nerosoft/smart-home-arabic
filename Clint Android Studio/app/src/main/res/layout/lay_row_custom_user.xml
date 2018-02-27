@@ -27,7 +27,7 @@
 
             <TextView
                 android:id="@+id/text_list_custom_user"
-                android:layout_width="150dp"
+                android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="4dp"
-                android:layout_marginTop="5dp"
+
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -50,19 +50,16 @@
 
                     <android.support.design.widget.FloatingActionButton
                         android:id="@+id/but_list_edit_user"
-                        android:layout_marginBottom="5dp"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginRight="7dp"
                         android:src="@android:drawable/ic_menu_edit"
                         android:tag="edite" />
 
                     <android.support.design.widget.FloatingActionButton
                         android:id="@+id/but_list_delete_user"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="7dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:background="@drawable/but_style_dash"
                         android:src="@android:drawable/ic_menu_close_clear_cancel"
                         android:tag="delete"
@@ -72,11 +69,11 @@
 
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/but_list_active_user"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"
+
+
                     android:background="@drawable/but_style_dash"
                     android:src="@drawable/ic_done"
                     android:tag="active"

@@ -1,491 +1,495 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layoutDirection="ltr"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_loogin2"
-    android:orientation="vertical"
-    android:paddingBottom="50dp">
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:orientation="vertical">
-
-        <jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout
-            android:id="@+id/main_swipe"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+
+                android:layout_height="195dp"
+                android:orientation="vertical">
+
+                <jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout
+                    android:id="@+id/main_swipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@drawable/item_dash"
+                                android:orientation="vertical"
+                                android:paddingBottom="3dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="15dp">
+
+                                <ProgressBar
+                                    android:id="@+id/prog_user_dash"
+                                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"
+                                    android:layout_marginRight="10dp"
+                                    android:progress="70"
+                                    android:progressDrawable="@drawable/prog_dash_user" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:lines="1"
+                                    android:text="User"
+                                    android:textColor="#FFF" />
+
+                                <TextView
+                                    android:id="@+id/text_user_dahs"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:text="20"
+                                    android:textColor="#FFF"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:src="@drawable/ic_userr" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@drawable/item_dash"
+                                android:orientation="vertical"
+                                android:paddingBottom="3dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="15dp">
+
+                                <ProgressBar
+                                    android:id="@+id/prog_user_wait_dash"
+                                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"
+                                    android:layout_marginRight="10dp"
+                                    android:progress="40"
+                                    android:progressDrawable="@drawable/prog_dash_user_wait" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:lines="1"
+                                    android:text="User Wait"
+                                    android:textColor="#FFF" />
+
+                                <TextView
+                                    android:id="@+id/text_user_wait_dash"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:text="10"
+                                    android:textColor="#FFF"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginRight="2dp"
+                                    android:src="@drawable/ice_user_wait" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@drawable/item_dash"
+                                android:orientation="vertical"
+                                android:paddingBottom="3dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="15dp">
+
+                                <ProgressBar
+                                    android:id="@+id/prog_user_active_dash"
+                                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"
+                                    android:layout_marginRight="10dp"
+                                    android:progress="20"
+                                    android:progressDrawable="@drawable/prog_user_connaction" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:lines="1"
+                                    android:text="User Active"
+                                    android:textColor="#FFF" />
+
+                                <TextView
+                                    android:id="@+id/text_user_active_dash"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:text="5"
+                                    android:textColor="#FFF"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:src="@drawable/ic_user_active" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@drawable/item_dash"
+                                android:orientation="vertical"
+                                android:paddingBottom="3dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="15dp">
+
+                                <ProgressBar
+                                    android:id="@+id/prog_connection_dash"
+                                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"
+                                    android:layout_marginRight="10dp"
+                                    android:progress="100"
+                                    android:progressDrawable="@drawable/prog_total" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:lines="1"
+                                    android:text="Connections"
+                                    android:textColor="#FFF" />
+
+                                <TextView
+                                    android:id="@+id/text_connection_dash"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:text="500"
+                                    android:textColor="#FFF"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginRight="2dp"
+                                    android:src="@drawable/ic_connection" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:background="@drawable/item_dash_w_a"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="130dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#F0ECEB"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
+                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="120dp"
+                    <ImageView
+                        android:id="@+id/but_dash_users_active"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_pnal_user_active" />
+
+                    <ImageView
+                        android:layout_width="1px"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:background="@drawable/item_dash"
-                        android:orientation="vertical"
-                        android:paddingBottom="5dp"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="5dp"
-                        android:paddingTop="15dp">
-
-                        <ProgressBar
-                            android:id="@+id/prog_user_dash"
-                            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="3dp"
-                            android:layout_marginRight="10dp"
-                            android:progress="70"
-                            android:progressDrawable="@drawable/prog_dash_user" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7dp"
-                            android:lines="1"
-                            android:text="User"
-                            android:textColor="#FFF" />
-
-                        <TextView
-                            android:id="@+id/text_user_dahs"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:lines="1"
-                            android:text="30"
-                            android:textColor="#FFF"
-                            android:textSize="30dp"
-                            android:textStyle="bold" />
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:src="@drawable/ic_userr" />
+                        android:layout_marginLeft="4dp"
+                        android:background="#C6C2C2" />
 
 
-                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/but_dash_users"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_pnal_user_total" />
 
-                    <LinearLayout
-                        android:layout_width="120dp"
+                    <ImageView
+                        android:layout_width="1px"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:background="@drawable/item_dash"
-                        android:orientation="vertical"
-                        android:paddingBottom="5dp"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="5dp"
-                        android:paddingTop="15dp">
-
-                        <ProgressBar
-                            android:id="@+id/prog_user_wait_dash"
-                            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="3dp"
-                            android:layout_marginRight="10dp"
-                            android:progress="40"
-                            android:progressDrawable="@drawable/prog_dash_user_wait" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7dp"
-                            android:lines="1"
-                            android:text="User Wait"
-                            android:textColor="#FFF" />
-
-                        <TextView
-                            android:id="@+id/text_user_wait_dash"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:lines="1"
-                            android:text="10"
-                            android:textColor="#FFF"
-                            android:textSize="30dp"
-                            android:textStyle="bold" />
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_marginRight="2dp"
-                            android:src="@drawable/ice_user_wait" />
+                        android:layout_marginLeft="4dp"
+                        android:background="#C6C2C2" />
 
 
-                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/but_dash_users_wait"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_pnal_user_wait" />
+
+                    <ImageView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:background="#C6C2C2" />
+
+
+                    <ImageView
+                        android:id="@+id/but_dash_sinsor_pir"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_sinsor_pir" />
+
+                    <ImageView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:background="#C6C2C2" />
+
+
+                    <ImageView
+                        android:id="@+id/but_dash_all_led_sinsor"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_ledmotion_sensor" />
+
+                    <ImageView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:background="#C6C2C2" />
+
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_music" />
+
 
                 </LinearLayout>
 
-                <LinearLayout
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <LinearLayout
-                        android:layout_width="120dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:background="@drawable/item_dash"
-                        android:orientation="vertical"
-                        android:paddingBottom="5dp"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="5dp"
-                        android:paddingTop="15dp">
-
-                        <ProgressBar
-                            android:id="@+id/prog_user_active_dash"
-                            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="3dp"
-                            android:layout_marginRight="10dp"
-                            android:progress="20"
-                            android:progressDrawable="@drawable/prog_user_connaction" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7dp"
-                            android:lines="1"
-                            android:text="User Active"
-                            android:textColor="#FFF" />
-
-                        <TextView
-                            android:id="@+id/text_user_active_dash"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:lines="1"
-                            android:text="5"
-                            android:textColor="#FFF"
-                            android:textSize="30dp"
-                            android:textStyle="bold" />
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:src="@drawable/ic_user_active" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="120dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:background="@drawable/item_dash"
-                        android:orientation="vertical"
-                        android:paddingBottom="5dp"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="5dp"
-                        android:paddingTop="15dp">
-
-                        <ProgressBar
-                            android:id="@+id/prog_connection_dash"
-                            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="3dp"
-                            android:layout_marginRight="10dp"
-                            android:progress="100"
-                            android:progressDrawable="@drawable/prog_total" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7dp"
-                            android:lines="1"
-                            android:text="Connections"
-                            android:textColor="#FFF" />
-
-                        <TextView
-                            android:id="@+id/text_connection_dash"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:lines="1"
-                            android:text="500"
-                            android:textColor="#FFF"
-                            android:textSize="30dp"
-                            android:textStyle="bold" />
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_marginRight="2dp"
-                            android:src="@drawable/ic_connection" />
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="15dp"
-        android:background="@drawable/item_dash_w_a"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:background="#F0ECEB"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/but_dash_users_active"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_pnal_user_active" />
-
-            <ImageView
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="4dp"
-                android:background="#C6C2C2" />
-
-
-            <ImageView
-                android:id="@+id/but_dash_users"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/ic_pnal_user_total" />
-
-            <ImageView
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="4dp"
-                android:background="#C6C2C2" />
-
-
-            <ImageView
-                android:id="@+id/but_dash_users_wait"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/ic_pnal_user_wait" />
-
-            <ImageView
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="4dp"
-                android:background="#C6C2C2" />
-
-
-            <ImageView
-                android:id="@+id/but_dash_sinsor_pir"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/ic_sinsor_pir" />
-
-            <ImageView
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="4dp"
-                android:background="#C6C2C2" />
-
-
-            <ImageView
-                android:id="@+id/but_dash_all_led_sinsor"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/ic_ledmotion_sensor" />
-
-            <ImageView
-                android:layout_width="1px"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="4dp"
-                android:background="#C6C2C2" />
-
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/ic_music" />
-
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="#C6C2C2" />
-
-        <FrameLayout
-            android:id="@+id/frag_dash"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ListView
-                android:id="@+id/list_dahs"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:divider="#FFCC00"
-                android:scrollbars="none"
-                android:visibility="visible">
-
-            </ListView>
-
-            <LinearLayout
-                android:id="@+id/lay_sinsor_pir_setting"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:orientation="horizontal"
-                android:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/but_pir_on"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/ic_on_pir"
-                        android:tag="2" />
-
-                    <ImageView
-                        android:id="@+id/but_pir_on_off"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/ic_on_and_off"
-                        android:tag="1" />
-
-                </LinearLayout>
-
+                    android:layout_height="1px"
+                    android:background="#C6C2C2" />
 
                 <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center">
+                    android:id="@+id/frag_dash"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    <nero_soft.com.nero_soft.ViewHolder.CircularSeekBar
-                        android:id="@+id/seek_sinsor_pir"
-                        android:layout_width="200dp"
+                    <ListView
+                        android:id="@+id/list_dahs"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        app:circle_color="#C6C2C2"
-                        app:circle_progress_color="#EA000E"
-                        app:circle_stroke_width="3dp"
-                        app:end_angle="413"
-                        app:max="100"
-                        app:pointer_color="#D41D10"
-                        app:pointer_halo_color="#C5766B"
-                        app:pointer_halo_color_ontouch="#B83B32"
-                        app:progress="50"
-                        app:start_angle="125" />
+                        android:divider="#FFCC00"
+                        android:scrollbars="none"
+                        android:visibility="visible">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="55dp"
-                        android:text="state Sinsor"
-                        android:textSize="10dp" />
+                    </ListView>
+
+                    <LinearLayout
+                        android:id="@+id/lay_sinsor_pir_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/but_pir_on"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_on_pir"
+                                android:tag="2" />
+
+                            <ImageView
+                                android:id="@+id/but_pir_on_off"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_on_and_off"
+                                android:tag="1" />
+
+                        </LinearLayout>
 
 
-                    <TextView
-                        android:id="@+id/text_sinsor_state"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="35dp"
-                        android:text="state:on"
-                        android:textSize="18dp"
-                        android:textStyle="italic" />
+                        <FrameLayout
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
 
-                    <TextView
-                        android:id="@+id/text_sinsor_s"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="60 S"
-                        android:textSize="30dp"
-                        android:textStyle="bold" />
+                            <nero_soft.com.nero_soft.ViewHolder.CircularSeekBar
+                                android:id="@+id/seek_sinsor_pir"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                app:circle_color="#C6C2C2"
+                                app:circle_progress_color="#EA000E"
+                                app:circle_stroke_width="3dp"
+                                app:end_angle="413"
+                                app:max="100"
+                                app:pointer_color="#D41D10"
+                                app:pointer_halo_color="#C5766B"
+                                app:pointer_halo_color_ontouch="#B83B32"
+                                app:progress="50"
+                                app:start_angle="125" />
 
-                    <ImageView
-                        android:id="@+id/but_sinsor_send_data"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center|bottom"
-                        android:layout_marginBottom="10dp"
-                        android:src="@drawable/ic_right_pir"
-                        android:tag="send" />
+                            <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_gravity="center"-->
+                                <!--android:layout_marginBottom="55dp"-->
+                                <!--android:text="state Sinsor"-->
+                                <!--android:textSize="10dp" />-->
+
+
+                            <TextView
+                                android:id="@+id/text_sinsor_state"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="30dp"
+                                android:text="state:on"
+                                android:textSize="12dp"
+                                android:textStyle="italic" />
+
+                            <TextView
+                                android:id="@+id/text_sinsor_s"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="60 S"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/but_sinsor_send_data"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center|bottom"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/ic_right_pir"
+                                android:tag="send" />
+
+
+                        </FrameLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/but_pir_off_on"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_off_and_on"
+                                android:tag="4" />
+
+                            <ImageView
+                                android:id="@+id/but_pir_off"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_off_pir"
+                                android:tag="3" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
 
 
                 </FrameLayout>
 
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/but_pir_off_on"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/ic_off_and_on"
-                        android:tag="4" />
-
-                    <ImageView
-                        android:id="@+id/but_pir_off"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/ic_off_pir"
-                        android:tag="3" />
-
-                </LinearLayout>
-
-
             </LinearLayout>
 
 
-        </FrameLayout>
-
-    </LinearLayout>
-
-
 </LinearLayout>
+
 
 

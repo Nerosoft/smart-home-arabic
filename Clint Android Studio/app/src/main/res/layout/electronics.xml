@@ -24,7 +24,10 @@
                 android:id="@+id/lay_click_led"
                 android:layout_width="150dp"
                 android:layout_height="100dp"
-                android:layout_margin="10dp"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
                 android:background="@color/search_shadow_layout"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -62,11 +65,19 @@
                     android:textColor="#FFF" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></LinearLayout>
+
             <FrameLayout
                 android:id="@+id/framcontainer"
                 android:layout_width="150dp"
                 android:layout_height="100dp"
-                android:layout_margin="10dp"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
                 android:background="@color/search_shadow_layout">
 
                 <LinearLayout

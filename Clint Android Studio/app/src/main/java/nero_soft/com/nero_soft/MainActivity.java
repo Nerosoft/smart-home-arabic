@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.support.annotation.CallSuper;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.BottomSheetBehavior;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -27,11 +30,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import nero_soft.com.nero_soft.DialogClass.ChangeAdmin;
 import nero_soft.com.nero_soft.DialogClass.CustomUserDailog;
 import nero_soft.com.nero_soft.DialogClass.DailogMessage;
 import nero_soft.com.nero_soft.DialogClass.EditeDialogNameLed;
 import nero_soft.com.nero_soft.DialogClass.EditeDialogUser;
+import nero_soft.com.nero_soft.animation.MyAinm;
 import nero_soft.com.nero_soft.interFace.Setting;
 import com.lapism.searchview.SearchAdapter;
 import com.lapism.searchview.SearchHistoryTable;
@@ -78,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         /* تعريف toolbar  */
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
@@ -110,10 +116,29 @@ public class MainActivity extends AppCompatActivity {
             setupViewPager(viewPager, SmartHome, DashBoard);
         }
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
 
+        final AppBarLayout coordinatorLayout=(AppBarLayout)findViewById(R.id.appbar);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if(position>0 )
+                    coordinatorLayout.setExpanded(false);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
 
     }
@@ -190,6 +215,8 @@ public class MainActivity extends AppCompatActivity {
             adapter.addFragment(db, "DashBoard");
         else
             navigationView.getMenu().findItem(R.id.setting_admin).setVisible(false);
+
+
 
         viewPager.setAdapter(adapter);
     }
@@ -505,7 +532,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (ItemSize > 0){
             SmartHome.smartHome.notifyDataSetChanged();
-            fab.show();
+            fab.setVisibility(View.VISIBLE);
         }
         else ServiceConnection.MeassagDialog("No Item Found", relativeLayout, null);
 
@@ -523,7 +550,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         SmartHome.smartHome.notifyDataSetChanged();
-        fab.hide();
+        fab.setVisibility(View.GONE);
     }
 
     @Override
@@ -600,4 +627,5 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 }
+
 

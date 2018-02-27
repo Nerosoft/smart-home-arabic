@@ -124,14 +124,14 @@ public class EditeDialogUser extends DialogFragment {
                                     if (result.getBoolean("state")) {
                                         ServiceConnection.Dash_Info.getJSONArray("users").put(Position, jsonObject);
                                         if (itemDash.GroupU != spinner.getSelectedItemPosition())
-                                                MainActivity.DashBoard.dashBoard.setEditeDashInfo("User Wait",
-                                                        spinner.getSelectedItemPosition()==1?"-":"+");
-
-                                        MainActivity.DashBoard.dashBoard.array.get(Position).Name = jsonObject.getString("user");
-                                        MainActivity.DashBoard.dashBoard.array.get(Position).GroupU = jsonObject.getInt("GroupU");
-                                        MainActivity.DashBoard.dashBoard.array.get(Position).comment = jsonObject.getString("comment");
-                                        MainActivity.DashBoard.dashBoard.MAD.notifyDataSetChanged();
-
+                                            MainActivity.DashBoard.dashBoard.setEditeDashInfo("User Wait",
+                                                    spinner.getSelectedItemPosition() == 1 ? "-" : "+");
+                                        if ( MainActivity.DashBoard.dashBoard.MAD.Position == 2) {
+                                            MainActivity.DashBoard.dashBoard.array.get(Position).Name = jsonObject.getString("user");
+                                            MainActivity.DashBoard.dashBoard.array.get(Position).GroupU = jsonObject.getInt("GroupU");
+                                            MainActivity.DashBoard.dashBoard.array.get(Position).comment = jsonObject.getString("comment");
+                                            MainActivity.DashBoard.dashBoard.MAD.notifyDataSetChanged();
+                                        }
                                         EditeDialogUser.this.getDialog().cancel();
                                     } else edit_user.setError("Name");
                                 } catch (JSONException e) {
